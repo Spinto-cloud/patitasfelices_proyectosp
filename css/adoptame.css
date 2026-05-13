@@ -1,0 +1,106 @@
+/* SECCIÓN */
+.form-adopcion {
+  padding: 80px 20px;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR */
+.contenedor-formulario {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* TITULOS */
+.contenedor-formulario h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ff914d;
+  margin-bottom: 10px;
+}
+
+.contenedor-formulario p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* INPUTS */
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.grupo-formulario label {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+/* EFECTO FOCUS */
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+  border-color: #ff914d;
+  outline: none;
+}
+
+/* TEXTAREA */
+textarea {
+  resize: none;
+  min-height: 140px;
+}
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* BOTÓN */
+button {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 15px;
+  background: #ff914d;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ff7722;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contenedor-formulario {
+    padding: 30px 20px;
+  }
+
+  .contenedor-formulario h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de adopción</title>
+    <link rel="stylesheet" href="css/adoptame.css"
+  </head>
+  <body>
+    <section class="form-adopcion">
+      <div class="contenedor-formulario">
+        <h1>Formulario de Adopción</h1>
+        <p>Ayúdanos a encontrar el mejor hogar para nuestras mascotas 🐾</p>
+
+        <form>
+          <!-- DATOS PERSONALES -->
+          <div class="grupo-formulario">
+            <label>Nombre Completo *</label>
+            <input type="text" placeholder="Ingresa tu nombre" />
+          </div>
+
+          <div class="grupo-formulario">
+            <label>Correo Electrónico *</label>
+            <input type="email" placeholder="correo@email.com" />
+          </div>
+
+          <div class="grupo-formulario">
+            <label>Teléfono *</label>
+            <input type="tel" placeholder="+57 300 000 0000" />
+          </div>
+
+          <div class="grupo-formulario">
+            <label>Ciudad *</label>
+            <input type="text" placeholder="Tu ciudad" />
+          </div>
+
+          <!-- INFORMACIÓN DEL HOGAR -->
+          <div class="grupo-formulario">
+            <label>¿Vives en?</label>
+
+            <select>
+              <option>Casa</option>
+              <option>Apartamento</option>
+              <option>Finca</option>
+            </select>
+          </div>
+
+          <div class="grupo-formulario">
+            <label>¿Tienes otras mascotas?</label>
+
+            <select>
+              <option>Sí</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <!-- EXPERIENCIA -->
+          <div class="grupo-formulario">
+            <label>¿Has adoptado antes?</label>
+
+            <select>
+              <option>Sí</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <!-- MENSAJE -->
+          <div class="grupo-formulario">
+            <label>¿Por qué deseas adoptar?</label>
+
+            <textarea
+              placeholder="Cuéntanos por qué quieres adoptar esta mascota"
+            ></textarea>
+          </div>
+
+          <!-- CHECKBOX -->
+          <div class="checkbox">
+            <input type="checkbox" />
+            <span>Acepto el compromiso de cuidado responsable.</span>
+          </div>
+
+          <!-- BOTÓN -->
+          <button type="submit">Solicitar adopción</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
