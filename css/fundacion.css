@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../img/patitasfelices.png.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: fuchsia;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: blue;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+}
+
+.a-encabezado {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.a-encabezado:hover {
+  color: #ffe082;
+  transform: scale(1.05);
+}
+
+#contenedor-equipo {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  padding-bottom: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 250px;
+  gap: 20px;
+}
+
+.miembro {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.miembro:hover {
+  transform: scale(1.05);
+}
+
+.miembro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.miembro:hover img {
+  transform: scale(1.1);
+}
+
+/* INFORMACIÓN SUPERPUESTA */
+.miembro h2,
+.miembro h3,
+.miembro p,
+.miembro button {
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+  color: white;
+}
+
+.miembro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+  z-index: 1;
+}
+
+.miembro h2 {
+  bottom: 90px;
+  font-size: 1.6rem;
+}
+
+.miembro h3 {
+  bottom: 65px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.miembro p {
+  bottom: 40px;
+  font-size: 0.9rem;
+}
+
+.miembro button {
+  bottom: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #ff914d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.miembro button:hover {
+  background: #ff7722;
+}
+
+.perfil-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ff914d;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.perfil-button:hover {
+  background: #ff7722;
+}
+
+/* EFECTO COLLAGE */
+.miembro:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.miembro:nth-child(4) {
+  grid-row: span 2;
+}
+
+.miembro:nth-child(6) {
+  grid-column: span 2;
+}
+
+.testimonios {
+  padding: 80px 10%;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.testimonios h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #2d6a4f;
+  text-align: center;
+}
+
+.subtitulo {
+  color: #64748b;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.contenedor-testimonios {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.video-testimonio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.video-testimonio video {
+  width: 100%;
+  max-width: 850px;
+  border-radius: 25px;
+}
+
+.card-testimonio {
+  background: white;
+  width: 300px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease;
+}
+
+.card-testimonio:hover {
+  transform: translateY(-10px);
+}
+
+.card-testimonio img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.card-testimonio h3 {
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.card-testimonio p {
+  color: #475569;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  #contenedor-equipo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .miembro:nth-child(1),
+  .miembro:nth-child(4),
+  .miembro:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* Celulares */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  #contenedor-equipo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  #contenedor-equipo {
+    grid-template-columns: 2fr;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+  #contenedor-equipo {
+    grid-template-columns: 3fr;
+  }
+}
